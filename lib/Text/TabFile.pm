@@ -123,19 +123,21 @@ newline appended).
 
 =head1 AUTHORSHIP:
 
-  Phil Pollard <bennie@cpan.org>
-  Released under GNU General Public License
+  Text::Tabfile v1.00 2004/04/02
 
-  Additional work by Kristina Davis <kdavis@hmsonline.com>
+  (c) 2004, Phillip Pollard <bennie@cpan.org>
+  Released under the Perl Artistic License
+
+  Additional contributions by Kristina Davis <krd@menagerie.tf>
   Based upon the original module by Andrew Barnett <abarnett@hmsonline.com>
 
-  Derived from Util::TabFile 1.9 2003/11/05 17:53:24
+  Derived from Util::TabFile 1.9 2003/11/05
   With permission granted from Health Market Science, Inc.
 
 =cut
 
 package Text::TabFile;
-$Text::TabFile::VERSION='0.8';
+$Text::TabFile::VERSION='1.00';
 
 use base 'Text::Delimited';
 use strict;

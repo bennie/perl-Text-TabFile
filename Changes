@@ -1,5 +1,10 @@
 Revision history for Perl extension Text::TabFile.
 
+1.00  2004/04/02
+
+	Full copyright and license information.
+	Sufficient usage to warrent a release of 1.0.
+
 0.80  2004/01/15
 
 	Derived from HMS tool Util::TabFile (1.9 2003/11/05)
