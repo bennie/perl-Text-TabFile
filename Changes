@@ -1,0 +1,7 @@
+Revision history for Perl extension Text::TabFile.
+
+0.80  2004/01/15
+
+	Derived from HMS tool Util::TabFile (1.9 2003/11/05)
+	Constructed to instance Text::Delimiter properly.
+	Module made to pass strict.
