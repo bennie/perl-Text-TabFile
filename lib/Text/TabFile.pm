@@ -20,45 +20,45 @@ A short example of usage is detailed below. It opens a file called
 "COLUMN1" in that row. It then closes the file.
 
   my $tabfile = new Text::TabFile;
-  $tabfile->Open('infile.tab');
+  $tabfile->open('infile.tab');
 
-  my @header = $tabfile->Fields;
+  my @header = $tabfile->fields;
 
-  while ( my $row = $tabfile->Read ) {
+  while ( my $row = $tabfile->read ) {
     print $row->{COLUMN1}, "\n";
   }
 
   $tabfile->Close;
 
-A shortcut for Open is to specifiy the file or a globbed filehanle as the 
+A shortcut for open() is to specifiy the file or a globbed filehanle as the 
 first parameter when the module is instanced:
 
   my $tabfile = new Text::TabFile ('infile.tab');
 
   my $tabfile = new Text::TabFile (\*STDIN);
 
-The Close() method is atuomatically called when the object passes out of 
-scope. However, you should not depend on this. Use Close() when 
+The close() method is atuomatically called when the object passes out of 
+scope. However, you should not depend on this. Use close() when 
 approrpiate.
 
 Other informational methods are also available. They are listed blow:
 
 =head1 METHODS:
 
-=item Close()
+=item close()
 
 Closes the file or connection, and cleans up various bits.
 
-=item Fields()
+=item fields()
 
 Returns an array (or arrayref, depending on the requested context) with 
 the column header fields in the order specified by the source file.
 
-=item FileName()
+=item filename()
 
 If Open was given a filename, this function will return that value.
 
-=item LineNumber()
+=item linenumber()
 
 This returns the line number of the last line read. If no calls to Read 
 have been made, will be 0. After the first call to Read, this will return 
@@ -75,7 +75,7 @@ TabFile.pm will append a _NUM to the end of all fields with duplicate names.
 That is, if your header row contains 2 columns named "NAME", one will be 
 changed to NAME_1, the other to NAME_2.
 
-=item Open([filename|filepointer], [enumerate])
+=item open([filename|filepointer], [enumerate])
 
 Opens the given filename or globbed filehandle and reads the header line. 
 Returns 0 if the operation failed. Returns the file object if succeeds.
@@ -85,7 +85,7 @@ TabFile.pm will append a _NUM to the end of all fields with duplicate names.
 That is, if your header row contains 2 columns named "NAME", one will be 
 changed to NAME_1, the other to NAME_2.
 
-=item Read()
+=item read()
 
 Returns a hashref with the next record of data. The hash keys are determined
 by the header line. 
@@ -98,7 +98,7 @@ __LINE__ is a string with the original tab-separated record.
 
 This method returns undef if there is no more data to be read.
 
-=item setMode(encoding)
+=item setmode(encoding)
 
 Set the given encoding scheme on the tabfile to allow for reading files
 encoded in standards other than ASCII.
@@ -123,10 +123,13 @@ newline appended).
 
 =head1 AUTHORSHIP:
 
-  Text::Tabfile v1.00 2004/04/02
+  Text::Tabfile v1.10 2006/06/31
 
-  (c) 2004, Phillip Pollard <bennie@cpan.org>
+  (c) 2004-2006, Phillip Pollard <bennie@cpan.org>
   Released under the Perl Artistic License
+
+  I'd like to thank PetBlvd for sponsoring continued work on this module.
+  http://www.petblvd.com/
 
   Additional contributions by Kristina Davis <krd@menagerie.tf>
   Based upon the original module by Andrew Barnett <abarnett@hmsonline.com>
@@ -137,7 +140,7 @@ newline appended).
 =cut
 
 package Text::TabFile;
-$Text::TabFile::VERSION='1.00';
+$Text::TabFile::VERSION='1.10';
 
 use base 'Text::Delimited';
 use strict;
@@ -150,17 +153,17 @@ our @EXPORT_OK = qw(tj tl);
 
 sub _init {
   my $self = shift @_;
-  $self->Delimiter("\t");
+  $self->delimiter("\t");
 }
 
 sub tj {
   my $self = shift @_ if ref($_[0]);
-  return join("\t",@_);
+  return join("\t",map {defined($_)?$_:''} @_);
 }
 
 sub tl {
   my $self = shift @_ if ref($_[0]);
-  return join("\t",@_) . "\n";
+  return join("\t",map {defined($_)?$_:''} @_) . "\n";
 }
 
 1;
