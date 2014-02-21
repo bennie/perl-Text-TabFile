@@ -1,8 +1,8 @@
-=head1 NAME:
+=head1 NAME
 
 Text::TabFile - Module for parsing tab delimited files
 
-=head1 SYNOPSIS:
+=head1 SYNOPSIS
 
 Text::TabFile provides a programattical interface to data stored in text 
 files delimited with tabs. It is dependant upon the first row of the tab 
@@ -13,7 +13,7 @@ After instancing, for each call to Read the next row's data is returned as
 a hash reference. The individual elements are keyed by their corresonding 
 column headings.
 
-=head1 USAGE:
+=head1 USAGE
 
 A short example of usage is detailed below. It opens a file called 
 'infile.tab', reads through every row and prints out the data from 
@@ -43,7 +43,7 @@ approrpiate.
 
 Other informational methods are also available. They are listed blow:
 
-=head1 METHODS:
+=head1 METHODS
 
 =item close()
 
@@ -103,7 +103,7 @@ This method returns undef if there is no more data to be read.
 Set the given encoding scheme on the tabfile to allow for reading files
 encoded in standards other than ASCII.
 
-=head1 EXPORTABLE METHODS:
+=head1 EXPORTABLE METHODS
 
 For convienience, the following methods are exportable. These are handy 
 for quickly writing output tab files.
@@ -117,16 +117,31 @@ Tab Join. Returns the given array as a string joined with tabs.
 Tab Line. Returns the given array as a string joined with tabs (with 
 newline appended).
 
-=head1 SEE ALSO:
+=head1 SEE ALSO
 
   Text::Delimited
 
-=head1 AUTHORSHIP:
+=head1 BUGS AND SOURCE
 
-  Text::Tabfile v1.10 2006/06/31
+	Bug tracking for this module: https://rt.cpan.org/Ticket/Display.html?id=?????
 
-  (c) 2004-2006, Phillip Pollard <bennie@cpan.org>
-  Released under the Perl Artistic License
+	Source hosting: http://www.github.com/bennie/perl-VMware-vCloud
+
+=head1 VERSION
+
+	Text::Tabfile vVERSIONTAG (DATETAG)
+
+=head1 COPYRIGHT
+
+	(c) 2004-YEARTAG, Phillip Pollard <bennie@cpan.org>
+
+=head1 LICENSE
+
+This source code is released under the "Perl Artistic License 2.0," the text of
+which is included in the LICENSE file of this distribution. It may also be
+reviewed here: http://opensource.org/licenses/artistic-license-2.0
+
+=head1 AUTHORSHIP
 
   I'd like to thank PetBlvd for sponsoring continued work on this module.
   http://www.petblvd.com/
@@ -134,13 +149,13 @@ newline appended).
   Additional contributions by Kristina Davis <krd@menagerie.tf>
   Based upon the original module by Andrew Barnett <abarnett@hmsonline.com>
 
-  Derived from Util::TabFile 1.9 2003/11/05
+  Originally derived from Util::TabFile 1.9 2003/11/05
   With permission granted from Health Market Science, Inc.
 
 =cut
 
 package Text::TabFile;
-$Text::TabFile::VERSION='1.10';
+$Text::TabFile::VERSION='VERSIONTAG';
 
 use base 'Text::Delimited';
 use strict;
