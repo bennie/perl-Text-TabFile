@@ -1,5 +1,11 @@
 Revision history for Perl extension Text::TabFile.
 
+VERSIONTAG  DATETAG
+
+	Updated meta information
+
+	Added LICENSE file to distribution
+
 1.10  2006/06/31
 
 	Provided non-capitalized method names to match Perl style as suggested
