@@ -1,5 +1,5 @@
 
-         Text::TabFile - Module for parsing tab delimited files - v 1.10
+         Text::TabFile - Module for parsing tab delimited files - vVERSIONTAG
 
 ================================================================================
 SYNOPSIS:
@@ -144,10 +144,10 @@ SEE ALSO:
 AUTHORSHIP:
 ================================================================================
 
-    Text::TabFile v1.10 2006/07/31
+    Text::TabFile vVERSIONTAG (DATETAG)
 
-    (c) 2004-2006, Phillip Pollard <bennie@cpan.org>
-    Released under the Perl Artistic License
+    (c) 2004-YEARTAG, Phillip Pollard <bennie@cpan.org>
+    Released under the Perl Artistic License 2.0
 
     I'd like to thank PetBlvd for sponsoring continued work on this module.
     http://www.petblvd.com/
