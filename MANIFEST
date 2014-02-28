@@ -7,4 +7,4 @@ README
 t/01-load.t
 t/02-historic.t
 t/03-parse.t
-META.yml
+t/test.tab

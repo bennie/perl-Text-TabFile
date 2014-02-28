@@ -1,0 +1,13 @@
+### Config
+
+$module = 'Text::TabFile';
+
+$author  = 'Phil Pollard <bennie@cpan.org>';
+$license = 'artistic_2';
+
+$abstract    = 'Parsing tab delimited files';
+$description = $abstract;
+
+$perl_ver = '5.006';
+
+%requires = ( 'Test' => '0', 'Text::Delimited' => '2.00' );

@@ -2,6 +2,10 @@ Revision history for Perl extension Text::TabFile.
 
 VERSIONTAG  DATETAG
 
+	Including a missing test data file.
+
+	Now auto-generating META.json and META.yml
+
 	Updated meta information
 
 	Added LICENSE file to distribution
