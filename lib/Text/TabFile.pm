@@ -45,6 +45,8 @@ Other informational methods are also available. They are listed blow:
 
 =head1 METHODS
 
+=over
+
 =item close()
 
 Closes the file or connection, and cleans up various bits.
@@ -103,10 +105,14 @@ This method returns undef if there is no more data to be read.
 Set the given encoding scheme on the tabfile to allow for reading files
 encoded in standards other than ASCII.
 
+=back
+
 =head1 EXPORTABLE METHODS
 
 For convienience, the following methods are exportable. These are handy 
 for quickly writing output tab files.
+
+=over
 
 =item tj(@STUFF)
 
@@ -116,6 +122,8 @@ Tab Join. Returns the given array as a string joined with tabs.
 
 Tab Line. Returns the given array as a string joined with tabs (with 
 newline appended).
+
+=back
 
 =head1 SEE ALSO
 
