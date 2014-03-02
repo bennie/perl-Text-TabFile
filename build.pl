@@ -157,9 +157,8 @@ unless ( -f $distdir.'/META.json' ) {
 
   print "Adding META.json to the MANIFEST\n";
   open MANIFEST, '>>', $distdir.'/MANIFEST';
-  print MANIFEST "META.json\nMakefile.PL";
+  print MANIFEST "META.json\n";
   close MANIFEST;
-
 }
 
 ### Updating the tags
