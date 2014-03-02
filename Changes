@@ -2,6 +2,10 @@ Revision history for Perl extension Text::TabFile.
 
 VERSIONTAG  DATETAG
 
+	Correcting POD errors
+
+1.12  2014/02/28
+
 	Including a missing test data file.
 
 	Bumped version due to earlier upload error.
