@@ -8,6 +8,6 @@ $license = 'artistic_2';
 $abstract    = 'Parsing tab delimited files';
 $description = $abstract;
 
-$perl_ver = '5.006';
+$perl_ver = '5.006001';
 
 %requires = ( 'Test' => '0', 'Text::Delimited' => '2.00' );

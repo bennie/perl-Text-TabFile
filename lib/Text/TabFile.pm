@@ -133,7 +133,7 @@ newline appended).
 
 	Bug tracking for this module: https://rt.cpan.org/Dist/Display.html?Name=Text-TabFile
 
-	Source hosting: http://www.github.com/bennie/perl-VMware-vCloud
+	Source hosting: http://www.github.com/bennie/perl-Text-TabFile
 
 =head1 VERSION
 
@@ -166,6 +166,7 @@ package Text::TabFile;
 $Text::TabFile::VERSION='VERSIONTAG';
 
 use base 'Text::Delimited';
+use warnings;
 use strict;
 
 require Exporter;
